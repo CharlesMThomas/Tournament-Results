@@ -65,7 +65,7 @@ Installation:
 
 #### Local Machine: 
 
-Download the files from this repository and place them within the **FSND-Virtual-Machine/vagrant** folder on your.
+Download the files from this repository and place them within the **FSND-Virtual-Machine/vagrant** folder.
 
 #### VirtualBox: 
 
