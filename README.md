@@ -55,7 +55,7 @@ Installation:
 
 `sudo apt-get install postgresql postgresql-contrib`
 
-** Psycopg2 - PosgtgreSQL adapter for Python**
+**Psycopg2 - PosgtgreSQL adapter for Python**
 
 Installation:
 
