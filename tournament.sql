@@ -29,3 +29,9 @@ CREATE VIEW v_loses as
   select loser, count(loser) as loses
   from matches
   group by loser;
+
+CREATE VIEW v_results as
+  select player_id, name, coalesce(wins, 0) as wins,
+  (coalesce(wins, 0) + coalesce(loses,0)) as matches
+  from players left join v_wins as wsubq on players.player_id = wsubq.winner
+  left join v_loses as lsubq on players.player_id = lsubq.loser

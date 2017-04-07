@@ -75,13 +75,7 @@ def playerStandings():
     standings = []
     db, cursor = connect()
     # All win and match calculations done via SQL aggregation
-    query = ('select player_id, name, coalesce(wins, 0) as wins, '
-             '(coalesce(wins, 0) + coalesce(loses,0)) as matches '
-             'from players left join v_wins as wsubq '
-             'on players.player_id = wsubq.winner '
-             'left join v_loses as lsubq '
-             'on players.player_id = lsubq.loser '
-             'order by wins;')
+    query = ('select * from v_results order by wins;')
     cursor.execute(query)
     rows = cursor.fetchall()
     db.close()
